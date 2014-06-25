@@ -1,0 +1,87 @@
+Name         : kde5-konsole
+Version      : 4.97.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : Konsole is a terminal program for KDE 5
+Description  : |
+  Konsole is a terminal program for KDE 5.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kde5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - kf5-kdbusaddons-devel
+    - kf5-kcoreaddons-devel
+    - kf5-kconfig-devel
+    - kf5-kcodecs-devel
+    - kf5-ki18n-devel
+    - kf5-kwidgetsaddons-devel
+    - kf5-karchive-devel
+    - kf5-kitemmodels-devel
+    - kf5-kauth-devel
+    - kf5-kguiaddons-devel
+    - kf5-kconfigwidgets-devel
+    - kf5-kitemviews-devel
+    - kf5-knotifications-devel
+    - kf5-kjs-devel
+    - kf5-kpty-devel
+    - kf5-kjobwidgets-devel
+    - kf5-kiconthemes-devel
+    - kf5-kcompletion-devel
+    - kf5-ktextwidgets-devel
+    - kf5-kglobalaccel-devel
+    - kf5-kxmlgui-devel
+    - kf5-solid-devel
+    - kf5-kwallet-devel
+    - kf5-kbookmarks-devel
+    - kf5-kio-devel
+    - kf5-kunitconversion-devel
+    - kf5-knotifyconfig-devel
+    - kf5-kparts-devel
+    - kf5-kross-devel
+    - kf5-kdelibs4support-devel
+    - kf5-kdoctools-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5Script
+    - Qt5PrintSupport
+Requires:
+    - kde5-filesystem
+
+Files:
+    - "%doc README COPYING COPYING.DOC COPYING.LIB COPYING.Unicode"
+    - "%{_kde5_bindir}/konsole"
+    - "%{_kde5_bindir}/konsoleprofile"
+    - "%{_kde5_libdir}/libkdeinit5_konsole.so"
+    - "%{_kde5_libdir}/libkonsoleprivate.so"
+    - "%{_kde5_plugindir}/konsolepart.so"
+    - "%{_kde5_datadir}/konsole"
+    - "%{_kde5_datadir}/kconf_update/*"
+    - "%{_datadir}/applications/org.kde.konsole.desktop"
+    - "%{_datadir}/kservicetypes5/terminalemulator.desktop"
+    - "%{_datadir}/kservices5/konsolepart.desktop"
+    - "%{_datadir}/kservices5/ServiceMenus/*.desktop"
+    - "%{_datadir}/knotifications5/konsole.notifyrc"
+    - "%{_datadir}/doc/HTML/en/konsole/"
