@@ -1,0 +1,87 @@
+Name         : konsole
+Version      : 4.97.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : Konsole is a terminal program for KDE 5
+Description  : |
+  Konsole is a terminal program for KDE 5.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - kdbusaddons-devel
+    - kcoreaddons-devel
+    - kconfig-devel
+    - kcodecs-devel
+    - ki18n-devel
+    - kwidgetsaddons-devel
+    - karchive-devel
+    - kitemmodels-devel
+    - kauth-devel
+    - kguiaddons-devel
+    - kconfigwidgets-devel
+    - kitemviews-devel
+    - knotifications-devel
+    - kjs-devel
+    - kpty-devel
+    - kjobwidgets-devel
+    - kiconthemes-devel
+    - kcompletion-devel
+    - ktextwidgets-devel
+    - kglobalaccel-devel
+    - kxmlgui-devel
+    - solid-devel
+    - kwallet-devel
+    - kbookmarks-devel
+    - kio-devel
+    - kunitconversion-devel
+    - knotifyconfig-devel
+    - kparts-devel
+    - kross-devel
+    - kdelibs4support-devel
+    - kdoctools-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5Script
+    - Qt5PrintSupport
+Requires:
+    - kf5-filesystem
+
+Files:
+    - "%doc README COPYING COPYING.DOC COPYING.LIB COPYING.Unicode"
+    - "%{_kf5_bindir}/konsole"
+    - "%{_kf5_bindir}/konsoleprofile"
+    - "%{_kf5_libdir}/libkdeinit5_konsole.so"
+    - "%{_kf5_libdir}/libkonsoleprivate.so"
+    - "%{_kf5_plugindir}/*"
+    - "%{_kf5_sharedir}/konsole"
+    - "%{_kf5_sharedir}/kxmlgui5/*"
+    - "%{_kf5_sharedir}/kconf_update/*"
+    - "%{_kf5_sharedir}/applications/org.kde.konsole.desktop"
+    - "%{_kf5_servicesdir}/*"
+    - "%{_kf5_servicetypesdir}/*"
+    - "%{_kf5_sharedir}/knotifications5/konsole.notifyrc"
+    - "%{_kf5_htmldir}/en/konsole/"
