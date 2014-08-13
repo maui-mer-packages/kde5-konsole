@@ -67,6 +67,15 @@ BuildRequires:  kdoctools-devel
 Konsole is a terminal program for KDE 5.
 
 
+%package doc
+Summary:    Documentation and user manuals for %{name}
+Group:      Documentation
+Requires:   %{name} = %{version}-%{release}
+
+%description doc
+Documentation and user manuals for %{name}
+
+
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
@@ -107,6 +116,11 @@ rm -rf %{buildroot}
 %{_kf5_servicesdir}/*
 %{_kf5_servicetypesdir}/*
 %{_kf5_sharedir}/knotifications5/konsole.notifyrc
-%{_kf5_htmldir}/en/konsole/
 # >> files
 # << files
+
+%files doc
+%defattr(-,root,root,-)
+%{_kf5_htmldir}/en/konsole/
+# >> files doc
+# << files doc

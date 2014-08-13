@@ -84,4 +84,12 @@ Files:
     - "%{_kf5_servicesdir}/*"
     - "%{_kf5_servicetypesdir}/*"
     - "%{_kf5_sharedir}/knotifications5/konsole.notifyrc"
-    - "%{_kf5_htmldir}/en/konsole/"
+
+SubPackages:
+    - Name: doc
+      Group: Documentation
+      Summary: Documentation and user manuals for %{name}
+      Description: |
+        Documentation and user manuals for %{name}
+      Files:
+          - "%{_kf5_htmldir}/en/konsole/"
