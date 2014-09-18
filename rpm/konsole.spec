@@ -8,6 +8,12 @@ Name:       konsole
 # >> macros
 # << macros
 
+# >> bcond_with
+# << bcond_with
+
+# >> bcond_without
+# << bcond_without
+
 Summary:    Konsole is a terminal program for KDE 5
 Version:    4.97.0
 Release:    1
@@ -107,7 +113,6 @@ rm -rf %{buildroot}
 %{_kf5_bindir}/konsole
 %{_kf5_bindir}/konsoleprofile
 %{_kf5_libdir}/libkdeinit5_konsole.so
-%{_kf5_libdir}/libkonsoleprivate.so
 %{_kf5_plugindir}/*
 %{_kf5_sharedir}/konsole
 %{_kf5_sharedir}/kxmlgui5/*
