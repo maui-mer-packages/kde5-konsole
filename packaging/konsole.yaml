@@ -7,7 +7,6 @@ Summary      : Konsole is a terminal program for KDE 5
 Description  : |
   Konsole is a terminal program for KDE 5.
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
