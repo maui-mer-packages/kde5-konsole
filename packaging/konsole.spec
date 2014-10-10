@@ -9,7 +9,7 @@ Name:       konsole
 # << macros
 
 Summary:    Konsole is a terminal program for KDE 5
-Version:    4.97.0
+Version:    2.99.900
 Release:    1
 Group:      System/Base
 License:    GPLv2+
